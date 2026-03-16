@@ -1,2 +1,2 @@
 # UserAPI
-UserAPI with JWT Tokes authenticatoin
+UserAPI with JWT Tokens authenticatoin
