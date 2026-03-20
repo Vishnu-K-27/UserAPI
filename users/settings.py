@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 from datetime import timedelta
 
 
+
 load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 
@@ -52,7 +53,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
-
+AUTH_USER_MODEL = "users_app.User"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

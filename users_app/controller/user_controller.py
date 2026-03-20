@@ -11,7 +11,7 @@ from users_app.utils.user_utils import verify_password
 @api_view(['POST'])
 def register_user(request):
     name = request.data.get("name")
-    email = request.data.get("email")
+    email = request.data.get("email")                     
     password = request.data.get("password")
 
     if not name or not email or not password:
@@ -110,7 +110,7 @@ def update_user(request, user_id):
         "data": serializer.data
     }, status=status.HTTP_200_OK)
 @api_view(['PUT'])
-@permission_classes([])
+@permission_classes([IsAuthenticated])
 def delete_user(request, user_id):
 
     try:
